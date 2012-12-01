@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.summary       = "Because copypasta is for toolbags."
   gem.homepage      = "https://github.com/boxen/cardboard"
 
+  gem.executables   = ["cardboard"]
   gem.files         = `git ls-files`.split $/
   gem.test_files    = gem.files.grep /^test/
   gem.require_paths = ["lib"]

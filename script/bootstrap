@@ -6,4 +6,4 @@ set -e
 cd $(dirname "$0")/..
 
 rm -rf .bundle/config
-bundle install --binstubs bin --path .bundle --quiet
+bundle install --path .bundle --quiet
