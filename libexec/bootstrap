@@ -1,2 +1,6 @@
 #!/bin/sh
-# Bootstrap shim. Currently a no-op.
+# Bootstrap shim. Installs Puppet deps for specs if necessary.
+
+if [ -f spec/fixtures/Puppetfile ]; then
+  cd spec/fixtures && ../../bin/librarian-puppet install
+fi
