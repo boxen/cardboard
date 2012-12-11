@@ -7,7 +7,7 @@ libexec = Pathname.new(__FILE__).realpath + "../../libexec"
 script  = libexec + ARGV.pop
 
 unless script.executable?
-  abort "Unknown script: #{script}"
+  abort "cardboard: Unknown script: #{script}"
 end
 
 exec script.to_s, *ARGV
