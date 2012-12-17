@@ -1,0 +1,7 @@
+#!/bin/sh
+# Check the idiom of all Puppet files.
+
+set -e
+
+exec .bundle/binstubs/puppet-lint \
+  --fail-on-warnings --no-80chars-check --with-filename manifests "$@"
