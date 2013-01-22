@@ -11,7 +11,19 @@ making sure all dependencies are up-to-date.
 
 ## Available Commands
 
-`FIX`
+### `bootstrap`
+
+Called before any other command, `bootstrap` makes sure any Puppet
+modules needed to run specs are available. It only runs if
+`spec/fixtures/Puppetfile` exists.
+
+### `lint`
+
+Runs `puppet-lint` on all `.pp` files in `manifests/`.
+
+### `syntax`
+
+Validates the syntax of all Puppet and Ruby files.
 
 ## Using Cardboard in Your Boxen Modules
 
@@ -21,3 +33,6 @@ from this template by running `boxen --new-module <module-name>`
 anywhere Boxen is installed.
 
 [template]: https://github.com/boxen/puppet-template
+
+Boxen's template makes Cardboard commands available via shims, so
+`script/cibuild` will run Cardboard's `libexec/cibuild` command.
