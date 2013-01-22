@@ -17,9 +17,18 @@ Called before any other command, `bootstrap` makes sure any Puppet
 modules needed to run specs are available. It only runs if
 `spec/fixtures/Puppetfile` exists.
 
+### `cibuild`
+
+FIX: Runs `script/syntax`, `script/lint`, and `script/specs` if they
+exist.
+
 ### `lint`
 
 Runs `puppet-lint` on all `.pp` files in `manifests/`.
+
+### `specs`
+
+FIX: Runs all specs under `spec/`.
 
 ### `syntax`
 
