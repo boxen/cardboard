@@ -28,7 +28,7 @@ Runs `puppet-lint` on all `.pp` files in `manifests/`.
 
 ### `specs`
 
-FIX: Runs all specs under `spec/`.
+Runs all specs under `spec/`.
 
 ### `syntax`
 
