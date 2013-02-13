@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = "cardboard"
-  gem.version       = "0.0.0"
+  gem.version       = "0.1.0"
   gem.authors       = ["John Barnette", "Will Farrington"]
   gem.email         = ["jbarnette@github.com", "wfarr@github.com"]
   gem.description   = "Development tools for Boxen's puppet modules."
@@ -12,8 +12,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep /^test/
   gem.require_paths = ["lib"]
 
-  gem.add_dependency "boxen",                  "~> 0.7"
+  gem.add_dependency "boxen",                  "~> 0.8"
   gem.add_dependency "puppet-lint",            "~> 0.3"
-  gem.add_dependency "puppetlabs_spec_helper", "~> 0.3"
+  gem.add_dependency "puppetlabs_spec_helper", "~> 0.4"
   gem.add_dependency "rspec-puppet",           "~> 0.1"
 end
