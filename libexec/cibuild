@@ -1,8 +1,13 @@
 #!/bin/sh
 # Check everything for CI.
 
-set -e
+libexec=$(dirname "$0")
 
-bundle exec cardboard syntax &&
-  bundle exec cardboard specs &&
-  bundle exec cardboard lint
+echo "--> Checking syntax:"
+"$libexec/syntax" || exit 1
+
+echo "--> Running specs:"
+"$libexec/specs" || exit 1
+
+echo "--> Checking lint:"
+"$libexec/lint" || exit 1

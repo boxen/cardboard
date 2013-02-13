@@ -5,7 +5,10 @@ set -e
 
 puppets=`find manifests -name '*.pp' -print 2>/dev/null`
 rubies=`find lib spec -name '*.rb' -not -path 'spec/fixtures/*' -print 2>/dev/null`
-templates=`find templates -type f -print 2>/dev/null`
+
+if [ -d "templates" ] ; then
+  templates=`find templates -type f -print 2>/dev/null`
+fi
 
 for puppet in $puppets; do
   /bin/echo -n "${puppet}: "
