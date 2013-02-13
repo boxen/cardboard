@@ -1,0 +1,8 @@
+#!/bin/sh
+# Check everything for CI.
+
+set -e
+
+bundle exec cardboard syntax &&
+  bundle exec cardboard specs &&
+  bundle exec cardboard lint
