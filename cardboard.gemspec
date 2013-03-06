@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = "cardboard"
-  gem.version       = "1.0.0"
+  gem.version       = "1.0.1"
   gem.authors       = ["John Barnette", "Will Farrington"]
   gem.email         = ["jbarnette@github.com", "wfarr@github.com"]
   gem.description   = "Development tools for Boxen's puppet modules."
