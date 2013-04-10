@@ -4,5 +4,6 @@
 set -e
 
 if [ -f spec/fixtures/Puppetfile ]; then
+  echo 'WARNING: This may fail if it has been run to much. Wait a while and try again...'
   cd spec/fixtures && ../../.bundle/binstubs/librarian-puppet install
 fi
