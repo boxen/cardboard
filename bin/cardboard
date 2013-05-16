@@ -4,7 +4,7 @@
 require "pathname"
 
 libexec = Pathname.new(__FILE__).realpath + "../../libexec"
-script  = libexec + ARGV.pop
+script  = libexec + ARGV.shift
 
 unless script.executable?
   abort "cardboard: Unknown script: #{script}"
