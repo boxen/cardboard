@@ -4,10 +4,10 @@
 libexec=$(dirname "$0")
 
 echo "--> Checking syntax:"
-"$libexec/syntax" || exit 1
+"$libexec/syntax" "$@" || exit 1
 
 echo "--> Running specs:"
-"$libexec/specs" || exit 1
+"$libexec/specs" "$@" || exit 1
 
 echo "--> Checking lint:"
-"$libexec/lint" || exit 1
+"$libexec/lint" "$@" || exit 1
