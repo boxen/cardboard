@@ -4,4 +4,8 @@
 set -e
 
 exec .bundle/binstubs/puppet-lint \
-  --fail-on-warnings --no-80chars-check --with-filename manifests "$@"
+  --fail-on-warnings \
+  --no-80chars-check \
+  --no-class_inherits_from_params_class-check \
+  --with-filename manifests \
+  "$@"
