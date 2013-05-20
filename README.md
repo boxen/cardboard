@@ -37,9 +37,7 @@ Validates the syntax of all Puppet and Ruby files.
 ## Using Cardboard in Your Boxen Modules
 
 It's probably best to follow the structure of
-[Boxen's template puppet module][template]. You can generate a stub
-from this template by running `boxen --new-module <module-name>`
-anywhere Boxen is installed.
+[Boxen's template puppet module][template]. 
 
 [template]: https://github.com/boxen/puppet-template
 
