@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+set -e
+[ -n "$DEBUG" ] && set -x
+
+usage() {
+  echo "Usage: cardboardify <path>"
+  echo ""
+  echo "Fresh Boxen modules!"
+  exit 1
+}
+
+install_template() {
+  curl -s -L https://github.com/boxen/puppet-template/archive/master.tar.gz | tar zx --strip-components 1
+
+  bundle install --binstubs .bundle/binstubs --path .bundle --quiet
+  .bundle/binstubs/rspec-puppet-init 2>&1 > /dev/null
+
+  rm Rakefile
+
+  rm -rf .git
+  git init .
+}
+
+if [ $# -ne 1 ]; then
+  usage
+fi
+
+path="$(pwd -P $1)/$1"
+
+if [ ! -d "$path" ]; then
+  echo "$path does not exist!" >&2
+  exit 1
+fi
+
+pwd=$(pwd)
+
+cd "$path"
+install_template 2>&1 > /dev/null
+
+echo "Cardboardified $path!"
+
+cd "$pwd"

@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.summary       = "Development dependencies for the ecosystem."
   gem.homepage      = "https://github.com/boxen/cardboard"
 
-  gem.executables   = ["cardboard"]
+  gem.executables   = ["cardboard", "cardboardify"]
   gem.files         = `git ls-files`.split $/
   gem.test_files    = gem.files.grep /^test/
   gem.require_paths = ["lib"]
