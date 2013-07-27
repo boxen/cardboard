@@ -12,16 +12,17 @@ def run(args)
   application_name = args[0]
   module_name = "puppet-#{args[0]}"
   if File.exists?(module_name)
-    warn "cardboardify: [SKIPPING] '#{module_name}' already exists"
+    warn "cardboardify: #{module_name}/ already exists"
     return 1
   elsif File.exists?(module_name.downcase)
-    warn "cardboardify: [SKIPPING] '#{module_name.downcase}' exists, which could conflict with `#{module_name}'"
+    warn "cardboardify: '#{module_name.downcase}' exists, which could conflict with `#{module_name}'"
     return 1
   else
-    puts "cardboardify: [CREATE FOLDER] Making '#{module_name}'"
+    puts "cardboardify: Creating '#{module_name}', this may take a few minutes"
     FileUtils.mkdir_p(module_name)
     get_boxen_template(module_name)
     modify_template_files(module_name, application_name)
+    puts "cardboardify complete!"
     return 0
   end
 end
