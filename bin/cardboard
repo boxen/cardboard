@@ -16,7 +16,7 @@ if ARGV.empty?
   abort "cardboard: No script given.\n#{usage}"
 end
 
-script  = libexec + ARGV.shift
+script = libexec + ARGV.shift
 
 unless script.executable?
   abort "cardboard: Unknown script: #{script}"
