@@ -6,6 +6,7 @@ Gem::Specification.new do |gem|
   gem.description   = "Development tools for Boxen's puppet modules."
   gem.summary       = "Development dependencies for the ecosystem."
   gem.homepage      = "https://github.com/boxen/cardboard"
+  gem.license       = "MIT"
 
   gem.executables   = ["cardboard", "cardboardify"]
   gem.files         = `git ls-files`.split $/
