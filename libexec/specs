@@ -1,5 +1,11 @@
 #!/bin/sh
 # Run the Puppet RSpecs.
 
+if [ "$1" == "-v" ]; then
+  err_out=/dev/stderr
+else
+  err_out=/dev/null
+fi
+
 find spec -name '*_spec.rb' -not -path 'spec/fixtures/*' -print0 |
-  xargs -0 bundle exec rspec 2>/dev/null
+  xargs -0 bundle exec rspec 2>$err_out
