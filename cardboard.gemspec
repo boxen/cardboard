@@ -16,5 +16,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency "boxen",                  "~> 4.0"
   gem.add_dependency "puppet-lint"
   gem.add_dependency "puppetlabs_spec_helper", "~> 0.4"
-  gem.add_dependency "rspec-puppet",           "~> 1.0"
+  gem.add_dependency "rspec-puppet",           "~> 2.0"
 end
